@@ -2,7 +2,7 @@ import os
 import openai
 import re
 
-key = "Your own key"
+key =
 
 
 def text_generate(ingredients, api_key):
@@ -26,6 +26,7 @@ def text_generate(ingredients, api_key):
     )
 
     response_text = response['choices'][0]['text']
+    print(response_text)
     recipe_text = response_text.split('\n\n')
     # parse the text into three separate lists
     response_list = re.split('Name:|Ingredients:|Instructions:', response_text)[1:]
@@ -68,8 +69,8 @@ def image_generate(recipe, api_key):
 
 
 if __name__ == '__main__':
-    name, ingredient, instruction, recipe = text_generate(['salmon', 'lettuce'], api_key=key)
-    print(image_generate(recipe[0], api_key=key))
+    name, ingredient, instruction, recipe = text_generate(['chicken', 'tomato', 'lettuce'], api_key=key)
+    print(name)
 
 
 
