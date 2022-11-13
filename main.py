@@ -27,7 +27,6 @@ def get_args_parser():
 
 def main(args):
     print("Hello World")
-    get_recipe_metric(["apple", "banana"], [3,5])
     return None
 
 
