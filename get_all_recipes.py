@@ -1,3 +1,10 @@
+# ------------------------------------------------------------------------
+# EcoFood
+# Copyright (c) 2022 OpenAI-Hackathon Team 34. All Rights Reserved.
+# Licensed under the MIT-style license found in the LICENSE file in the root directory
+# ------------------------------------------------------------------------
+
+
 name_salmon = [' Salmon and Broccoli Traybake with Mustard Sauce', 
         ' Maple Mustard salmon with Roasted Broccoli', 
         ' Salmon with Steamed Beans and Broccoli with mustard sauce', 

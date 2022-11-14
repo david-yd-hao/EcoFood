@@ -1,3 +1,10 @@
+# ------------------------------------------------------------------------
+# EcoFood
+# Copyright (c) 2022 OpenAI-Hackathon Team 34. All Rights Reserved.
+# Licensed under the MIT-style license found in the LICENSE file in the root directory
+# ------------------------------------------------------------------------
+
+
 import os
 import openai
 import re
@@ -119,4 +126,5 @@ if __name__ == '__main__':
                + 'Follow the format of \n Name: \n Ingredients: \n Instructions: \n'
     name, ingredient, instruction, recipe = generate_all(prompt_2, api_key=key, finetune=False)
     print(ingredient)
+    print(instruction)
 
