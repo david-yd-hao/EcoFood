@@ -14,4 +14,6 @@ EcoFood is a search engine for recipes based on queries of ingredients:
   - Allow entering of multiple desired ingredients
 2. Option to shop the ingredients there and then
   - Business Idea: partner with businesses (affiliate partnerships) to offer monetary incentives (commissions) based on carbon footprint saved
+  
+<img src = "./pipeline.jpg" width = 100%>
 
