@@ -12,14 +12,13 @@ def text_generate(ingredients, api_key):
     prompt = 'Create three different food recipes while making use of ' + ingredients_str + '.' \
              + 'Display weight of each ingredient used.' \
              + 'Follow the format of \n Name: \n Ingredients: \n Instructions: \n'
-    prompt = 'Name five low-carbon-footprint recipes that use beef'
 
     # get response from GPT-3
     response = openai.Completion.create(
-        model="davinci:ft-university-of-cambridge-2022-11-14-00-29-20",
+        model="text-davinci-002",
         prompt=prompt,
         temperature=0.0,
-        max_tokens=128,
+        max_tokens=2048,
         top_p=1,
         best_of=3,
         frequency_penalty=0.0,
@@ -27,7 +26,6 @@ def text_generate(ingredients, api_key):
     )
 
     response_text = response['choices'][0]['text']
-    print(response_text)
     recipe_text = response_text.split('\n\n')
     # parse the text into three separate lists
     response_list = re.split('Name:|Ingredients:|Instructions:', response_text)[1:]
@@ -70,8 +68,6 @@ def image_generate(recipe, api_key):
 
 
 if __name__ == '__main__':
-    key='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'
-    key='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'
     name, ingredient, instruction, recipe = text_generate(['salmon', 'lettuce'], api_key=key)
     print(image_generate(recipe[0], api_key=key))
 
